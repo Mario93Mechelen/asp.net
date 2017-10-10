@@ -1,0 +1,4 @@
+C:\Users\Mario\aspdotnet_Mario_Samison\aspdotnetcore_Mario_Samison\aspdotnetcore_Mario_Samison\obj\Debug\netcoreapp2.0\aspdotnetcore_Mario_Samison.csprojResolveAssemblyReference.cache
+C:\Users\Mario\aspdotnet_Mario_Samison\aspdotnetcore_Mario_Samison\aspdotnetcore_Mario_Samison\obj\Debug\netcoreapp2.0\aspdotnetcore_Mario_Samison.csproj.CoreCompileInputs.cache
+C:\Users\Mario\aspdotnet_Mario_Samison\aspdotnetcore_Mario_Samison\aspdotnetcore_Mario_Samison\obj\Debug\netcoreapp2.0\aspdotnetcore_Mario_Samison.AssemblyInfoInputs.cache
+C:\Users\Mario\aspdotnet_Mario_Samison\aspdotnetcore_Mario_Samison\aspdotnetcore_Mario_Samison\obj\Debug\netcoreapp2.0\aspdotnetcore_Mario_Samison.AssemblyInfo.cs
