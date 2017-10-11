@@ -1,15 +1,37 @@
-﻿@model BookDetailViewModel
+﻿@model BookEditDetailViewModel
 
 @{
-    ViewData["Title"] = "Detail " + Model.Title + ", door " + Model.Author;
+    ViewData["Title"] = "Detail " + Model.Title;
 }
 
 <div class="row">
     <div class="col-md-12">
         <div>
-            De titel is @Model.Title , de auteur is @Model.Author en de isbn is @Model.ISBN
+            <form asp-controller="Book" asp-action="Persist" method="post">
+                <input type="hidden" asp-for="Id" />
+
+                <div class="form-group">
+                    <label asp-for="Title">Titel:</label>
+                    <input type="text" asp-for="Title" placeholder="Titel van het boek." />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CreationDate">Aanmaakdatum:</label>
+                    <input type="date" asp-for="CreationDate" />
+                    <span asp-validation-for="CreationDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ISBN">ISBN:</label>
+                    <input type="text" asp-for="ISBN" placeholder="ISBN van het boek." />
+                    <span asp-validation-for="ISBN" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Genre">Genre:</label>
+                    <select asp-for="GenreId" asp-items="Model.Genres"></select>
+                    <span asp-validation-for="Genre" class="text-danger"></span>
+                </div>
+                <input type="submit" />
+            </form>
         </div>
     </div>
 </div>
-
-<p>Go to the next book.</p>
