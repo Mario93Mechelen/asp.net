@@ -58,6 +58,14 @@ namespace Bibliotheek.Controllers
             return View(vm);
         }
 
+        [HttpGet("/books/create")]
+        public IActionResult Create()
+        {
+            var vm = new BookEditDetailViewModel();
+            vm.Genres = _entityContext.Genre.Select(x =>);
+            return View(vm);
+        }
+
 
         [HttpPost("/books")]
         public IActionResult Persist([FromForm] BookEditDetailViewModel vm)
