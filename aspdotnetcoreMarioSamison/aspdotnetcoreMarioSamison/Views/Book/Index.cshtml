@@ -1,0 +1,29 @@
+﻿@model BookListViewModel
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+@{
+    ViewData["Title"] = "Overzicht boeken";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <td>CreationDate</td>
+                    <td>Title</td>
+                    <td>Author</td>
+                    <td>ISBN</td>
+                </tr>
+            </thead>
+            @foreach (var book in Model.Books)
+            {
+                <tr>
+                    <td>@book.CreationDate</td>
+                    <td>@book.Title</td>
+                    <td>@book.Author</td>
+                    <td>@book.ISBN</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
