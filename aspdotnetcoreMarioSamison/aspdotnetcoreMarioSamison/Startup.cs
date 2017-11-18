@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using aspdotnetcoreMarioSamison.Data;
 using aspdotnetcoreMarioSamison.Entities;
+using aspdotnetcoreMarioSamison.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -24,7 +25,8 @@ namespace aspdotnetcoreMarioSamison
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<EntityContext>(options => options.UseSqlite("Filename=./books.db"));
+            services.AddDbContext<EntityContext>(options => options.UseInMemoryDatabase("Books"));
+            services.AddScoped<IBookService, BookService>();
             services.AddMvc();
         }
 
